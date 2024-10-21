@@ -1,0 +1,30 @@
+# Choreo 组件配置文件
+# 用于定义如何在 Choreo 平台上部署和运行您的服务
+
+# 架构版本：指定使用的 Choreo 配置文件版本
+schemaVersion: 1.0
+
+# 组件类型：指定这是一个什么类型的服务
+type: Component
+
+# 组件名称：给您的服务起一个好记的名字
+name: MyDockerizedChoreoService
+
+# 版本：用于标识您的服务版本
+version: 1.0.0
+
+# 构建配置：告诉 Choreo 如何构建您的服务
+build:
+  # 使用 Docker 构建
+  type: docker
+  # Dockerfile 的位置
+  dockerfile: Dockerfile
+
+# 部署配置：定义如何在 Choreo 上运行您的服务
+deploy:
+  # 部署模式：选择 web 或 server
+  mode: web
+  # 容器端口映射
+  containerPort: 8080
+
+
