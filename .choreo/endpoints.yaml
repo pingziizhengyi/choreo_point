@@ -1,0 +1,18 @@
+# Choreo 端点配置文件
+
+# 定义服务的端点
+endpoints:
+  # 生产环境端点
+  - name: prod
+    port: 8080
+    type: http
+    context: /
+    visibility: public
+
+# 如果您的服务有多个端点，可以在这里添加更多配置
+# 例如：
+#   - name: admin
+#     port: 8081
+#     type: http
+#     context: /admin
+#     visibility: private
